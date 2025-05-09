@@ -166,3 +166,15 @@ img {
   margin-top: 20px;
   background: var(--color-neutral-900);
 }
+.circle {
+  background: none;
+  position: absolute;
+}
+.circle-1 {
+  top: -15vh;
+  left: 4vw;
+}
+.circle-2 {
+  top: 50vh;
+  right: 20vw;
+}

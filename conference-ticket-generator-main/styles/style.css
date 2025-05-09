@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
+}
+:root {
+  --mobile: 375px;
+  --desktop: 1440px;
+  --color-neutral-0: hsl(0, 0%, 100%);
+  --color-neutral-300: hsl(252, 6%, 83%);
+  --color-neutral-500: hsl(245, 15%, 58%);
+  --color-neutral-700: hsl(245, 19%, 35%);
+  --color-neutral-900: hsl(248, 70%, 10%);
+  --color-orange-500: hsl(7, 88%, 67%);
+  --color-orange-700: hsl(7, 71%, 60%);
+  --color-gradient: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+
+  --form-gap: 16px;
+}
+.header-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  > img {
+    background: none;
+    width: 1.5rem;
+    margin-right: 10px;
+  }
+}
+.logo {
+  display: inline-block;
+}
+.top-img {
+  content: "";
+  position: fixed;
+  width: 446px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/pattern-squiggly-line-top.svg");
+}
+.bottom-img {
+  content: "";
+  position: fixed;
+  width: 825px;
+  height: 400px;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/pattern-squiggly-line-bottom-desktop.svg");
+}
+body {
+  z-index: 10;
+  margin: 0;
+  font-family: "Inconsolata";
+  background-image:
+    url("../assets/images/pattern-lines.svg"),
+    url("../assets/images/background-desktop.png");
+  background-size: cover;
+  color: var(--color-neutral-0);
+  > label {
+    font-size: 20px;
+    z-index: 15;
+  }
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+  margin: 4px 0;
+}
+p {
+  color: var(--color-neutral-500);
+}
+.file-info {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 5px;
+  top: calc(var(--form-gap) * -0.5);
+  span {
+    font-size: 0.65rem;
+    z-index: 15;
+    color: var(--color-neutral-300);
+  }
+  img {
+    z-index: 15;
+    background: none;
+    object-fit: contain;
+    padding: 0;
+  }
+}
+.title {
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-gap);
+  z-index: 20;
+}
+input,
+img {
+  background: #fff1;
+  border: 1px solid var(--color-neutral-500);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--color-neutral-300);
+  z-index: 15;
+}
+.file {
+  background: #fff1;
+  border-radius: 5px;
+  height: 80px;
+  border: 1px dashed var(--color-neutral-500);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 20px;
+  input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+  }
+  p {
+    color: var(--color-neutral-500);
+  }
+}
+button {
+  background-color: var(--color-orange-500);
+  z-index: 15;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+img {
+  border: none;
+  padding: 6px;
+}
+.attribution {
+  /* how i implemented it's a bad practice */
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 15;
+  padding: 10px 5px;
+  bottom: 0;
+  margin: 0;
+  margin-top: 20px;
+  background: var(--color-neutral-900);
+}

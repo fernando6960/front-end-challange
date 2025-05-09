@@ -1,0 +1,12 @@
+Calculando el ratio pana
+16 / 9 = r
+
+
+x = 16
+y = 9
+
+x = r * y
+800/r = y
+800 / (16/9) = y
+
+

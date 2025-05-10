@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fernando Guerrero" />
     <!-- displays site properly based on user's device -->
     <link
       rel="icon"
@@ -14,33 +15,42 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="styles/style.css" />
     <script>
-    window.onload = ()=>{
-      const btn = document.querySelector('button');
-      btn.addEventListener('click', (evt)=>{
-        evt.preventDefault();
-        window.location.href = 'ticket.html';
-      })    
-    }
-
+      window.onload = () => {
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", (evt) => {
+          evt.preventDefault();
+          window.location.href = "ticket.html";
+        });
+      };
     </script>
   </head>
   <body>
     <!-- Form starts -->
     <div class="bottom-img"></div>
     <div class="top-img"></div>
-    <img src="./assets/images/pattern-circle.svg" alt="" class="circle circle-1">
-    <img src="./assets/images/pattern-circle.svg" alt="" class="circle circle-2">
+    <img
+      src="./assets/images/pattern-circle.svg"
+      alt=""
+      class="circle circle-1"
+    />
+    <img
+      src="./assets/images/pattern-circle.svg"
+      alt=""
+      class="circle circle-2"
+    />
     <header>
       <div class="header-title">
-        <img
-          src="./assets/images/logo-mark.svg"
-          alt="Coding Conf logo"
-          class="logo"
-        />
-        <h1>Coding Conf</h1>
+        <a href="index.html">
+          <img
+            src="./assets/images/logo-mark.svg"
+            alt="Coding Conf logo"
+            class="logo"
+          />
+          <h1>Coding Conf</h1>
+        </a>
       </div>
+    </header>
     <main>
-      
       <div class="title">
         <h2>Your Journey to Coding Conf</h2>
         <h2>2025 Starts Here!</h2>
@@ -69,20 +79,17 @@
 
     <!-- Form ends -->
 
-    <!-- Generated tickets starts -->
-    <div style="display: none">
-      Congrats,
-      <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
-      <!-- Email Address -->
-      and will send updates in the run up to the event. Coding Conf Jan 31, 2025
-      / Austin, TX
-    </div>
-    <!-- Generated tickets ends -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="">Fernando Guerrero Toledo</a>.
-    </div>
+    <footer style="margin-top: auto">
+      <div class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/fernando6960">Fernando Guerrero Toledo</a
+          >.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

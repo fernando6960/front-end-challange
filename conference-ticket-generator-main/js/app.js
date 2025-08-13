@@ -22,4 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     preload_content.style.display = "";
     content_img.style.display = "none";
   });
+  btn_change.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    URL.revokeObjectURL(img.src);
+    avatar.click();
+  });
 });

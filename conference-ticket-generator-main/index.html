@@ -16,17 +16,18 @@
     <link rel="stylesheet" href="styles/style.css" />
     <script>
       window.onload = () => {
-        const btn = document.querySelector("button");
+        const btn = document.querySelector("#generate-ticket");
         btn.addEventListener("click", (evt) => {
           evt.preventDefault();
+          console.log("hhhhh");
           window.location.href = "ticket.html";
         });
       };
     </script>
+    <script src="js/app.js"></script>
   </head>
-  <body>
+  <body style="overflow-x: hidden">
     <!-- Form starts -->
-    <div class="bottom-img"></div>
     <div class="top-img"></div>
     <img
       src="./assets/images/pattern-circle.svg"
@@ -40,7 +41,7 @@
     />
     <header>
       <div class="header-title">
-        <a href="index.html">
+        <a href="/">
           <img
             src="./assets/images/logo-mark.svg"
             alt="Coding Conf logo"
@@ -58,28 +59,45 @@
       <p>Secure your spot at next year's biggest coding conference.</p>
       <form class="form">
         <label for="avatar" class="avatar-label">Upload Avatar</label>
-        <div class="file">
-          <input type="file" name="" />
-          <img src="./assets/images/icon-upload.svg" alt="" />
-          <p>Drag and drop or click to upload</p>
+        <div>
+          <div class="file">
+            <div class="normal">
+              <input type="file" name="" id="avatar" />
+              <img src="./assets/images/icon-upload.svg" alt="" />
+              <p>Drag and drop or click to upload</p>
+            </div>
+            <div class="loaded-file" style="display: none">
+              <img src="" alt="without content" id="img-loaded" />
+              <div class="buttons">
+                <button type="" id="remove-img">Remove Image</button>
+                <button type="" id="change-img">Change Image</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="file-info">
           <img src="./assets/images/icon-info.svg" alt="" />
           <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
         </div>
-        <label for="">Full Name</label>
-        <input type="text" name="" value="" />
-        <label for="">Email Address</label>
-        <input type="text" name="" value="" placeholder="example@email.com" />
-        <label for="">GitHub Username</label>
-        <input type="text" name="" value="" placeholder="@yourusername" />
-        <button type="">Generate My Ticket</button>
+        <label for="full-name">Full Name</label>
+        <input type="text" name="" value="" id="full-name" />
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          name=""
+          placeholder="example@email.com"
+          id="email"
+        />
+        <label for="github">GitHub Username</label>
+        <input type="text" name="" placeholder="@yourusername" id="github" />
+        <button type="" id="generate-ticket">Generate My Ticket</button>
       </form>
     </main>
 
     <!-- Form ends -->
 
     <footer style="margin-top: auto">
+      <div class="bottom-img"></div>
       <div class="attribution">
         <p>
           Challenge by
